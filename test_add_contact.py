@@ -13,18 +13,19 @@ class UntitledTestCase(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_untitled_test_case(self):
-        driver = self.driver
-        self.login(driver)
-        self.add_new_contact(driver, Contact("fst", "mdl", "lst", "nck"))
-        self.logout(driver)
+    def test_add_contact(self):
+        self.login()
+        self.add_new_contact(Contact("fst", "mdl", "lst", "nck"))
+        self.logout()
 
-    def logout(self, driver):
+    def logout(self):
         # logout
+        driver = self.driver
         driver.find_element_by_link_text("Logout").click()
 
-    def add_new_contact(self, driver, contact):
+    def add_new_contact(self, contact):
         # add new contact
+        driver = self.driver
         driver.find_element_by_link_text("add new").click()
         driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
@@ -36,8 +37,9 @@ class UntitledTestCase(unittest.TestCase):
         driver.find_element_by_name("nickname").clear()
         driver.find_element_by_name("nickname").send_keys(contact.nickname)
 
-    def login(self, driver):
+    def login(self):
         # login
+        driver = self.driver
         driver.get("http://localhost/addressbook/")
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
