@@ -40,3 +40,15 @@ class GroupHelper:
         # submit deletion
         driver.find_element_by_name("delete").click()
         self.return_to_groups_page()
+
+    def modify_first_group(self):
+        driver = self.app.driver
+        self.open_groups_page()
+        driver.find_element_by_name("selected[]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='name'])[1]/following::input[3]").click()
+        driver.find_element_by_name("group_name").click()
+        driver.find_element_by_name("group_name").clear()
+        driver.find_element_by_name("group_name").send_keys("0000")
+        driver.find_element_by_name("update").click()
+        self.return_to_groups_page()
