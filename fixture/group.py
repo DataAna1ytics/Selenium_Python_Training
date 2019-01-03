@@ -39,7 +39,7 @@ class GroupHelper:
     def delete_first_group(self):
         driver = self.app.driver
         self.open_groups_page()
-        self.select_first_group(driver)
+        self.select_first_group()
         # submit deletion
         driver.find_element_by_name("delete").click()
         self.return_to_groups_page()
