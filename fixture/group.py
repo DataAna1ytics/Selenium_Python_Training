@@ -59,3 +59,8 @@ class GroupHelper:
         # submit modification
         driver.find_element_by_name("update").click()
         self.return_to_groups_page()
+
+    def count(self):
+        driver = self.app.driver
+        self.open_groups_page()
+        return len(driver.find_elements_by_name("selected[]"))

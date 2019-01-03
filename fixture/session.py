@@ -34,8 +34,8 @@ class SessionHelper:
 
     def is_logged_in_as(self, username):
         driver = self.app.driver
-        return driver.find_elements_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/preceding::b[1]").text \
+        return driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/preceding::b[1]") \
                == "("+username+")"
 
     def ensure_login(self, username, password):
