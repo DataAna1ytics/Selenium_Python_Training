@@ -57,3 +57,8 @@ class ContactHelper:
     def select_first_contact(self):
         driver = self.app.driver
         driver.find_element_by_name("selected[]").click()
+
+    def count(self):
+        driver = self.app.driver
+        self.return_to_home_page()
+        return len(driver.find_elements_by_name("selected[]"))
