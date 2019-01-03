@@ -9,7 +9,8 @@ class ContactHelper:
     def return_to_home_page(self):
         # return to groups page
         driver = self.app.driver
-        driver.find_element_by_link_text("home").click()
+        if not driver.current_url.endswith("/addressbook/"):
+            driver.find_element_by_link_text("home").click()
 
     def add_new_contact(self, contact):
         # add new contact
