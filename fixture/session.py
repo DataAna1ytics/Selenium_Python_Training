@@ -16,12 +16,10 @@ class SessionHelper:
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
         driver.find_element_by_name("user").send_keys(username)
-#        driver.find_element_by_id("LoginForm").click()
         driver.find_element_by_name("pass").click()
         driver.find_element_by_name("pass").clear()
         driver.find_element_by_name("pass").send_keys(password)
-        driver.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]").click()
+        driver.find_element_by_css_selector('input[type="submit"]').click()
 
     def ensure_logout(self):
         driver = self.app.driver
@@ -34,7 +32,11 @@ class SessionHelper:
 
     def is_logged_in_as(self, username):
         driver = self.app.driver
-        return driver.find_element_by_xpath("//div[@id='top']/form/b").text == "("+username+")"
+        return self.get_logged_user() == username
+
+    def get_logged_user(self):
+        driver = self.app.driver
+        return driver.find_element_by_xpath("//div[@id='top']/form/b").text[1:-1]
 
     def ensure_login(self, username, password):
         driver = self.app.driver
