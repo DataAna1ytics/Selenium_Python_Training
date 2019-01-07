@@ -63,3 +63,4 @@ class ContactHelper:
         driver = self.app.driver
         self.return_to_home_page()
         return len(driver.find_elements_by_name("selected[]"))
+
