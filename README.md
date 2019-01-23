@@ -1,2 +1,1 @@
-# python_training
-# repo for training
+# Автоматизация тестирования на python используя Selenium по курсу А.Баранцева
