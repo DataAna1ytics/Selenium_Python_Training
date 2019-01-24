@@ -68,6 +68,17 @@ class ContactHelper:
         self.open_home_page()
         self.contact_cache = None
 
+    def delete_contact_by_id(self, id):
+        driver = self.app.driver
+        # select first contact
+        self.select_contact_by_id(id)
+        # submit deletion
+        driver.find_element_by_xpath("//div[2]/input").click()
+        driver.switch_to_alert().accept()
+        time.sleep(5)
+        self.open_home_page()
+        self.contact_cache = None
+
     def modify_first_contact(self, new_contact_data):
         self.modify_contact_by_index(new_contact_data, 0)
 
@@ -88,6 +99,10 @@ class ContactHelper:
     def select_contact_by_index(self, index):
         driver = self.app.driver
         driver.find_elements_by_name("selected[]")[index].click()
+
+    def select_contact_by_id(self, id):
+        driver = self.app.driver
+        driver.find_element_by_css_selector("input[id='%s']" % id).click()
 
     def count(self):
         driver = self.app.driver

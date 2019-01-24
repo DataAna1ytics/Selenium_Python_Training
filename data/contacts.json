@@ -1,0 +1,74 @@
+[
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "",
+    "homephone": null,
+    "id": null,
+    "lastname": "",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "fnamePK/h:PJ",
+    "homephone": "hphone[H#&-?Y@V:^[",
+    "id": null,
+    "lastname": "lname<as6?=M",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "fname sZC& ",
+    "homephone": "hphone rI-",
+    "id": null,
+    "lastname": "lnameF2`  fpWh/i6 j%!6wv",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "fnamelZ",
+    "homephone": "hphoneqZ P`DR|^\"n5\\A$>#[",
+    "id": null,
+    "lastname": "lnamei8+h|1) Op{nY 1p ",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "fnameWDJB1M|",
+    "homephone": "hphone?in(RX\"~Bvn]&",
+    "id": null,
+    "lastname": "lnameK mW+mOo*0, sPbe\"(v",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "all_phones_from_home_page": null,
+    "all_phones_from_view_page": null,
+    "firstname": "fname3i*",
+    "homephone": "hphone@.qwxV)#J.!-neh?",
+    "id": null,
+    "lastname": "lname KRN8BPr_7",
+    "mobilephone": null,
+    "secondaryphone": null,
+    "workphone": null
+  }
+]
